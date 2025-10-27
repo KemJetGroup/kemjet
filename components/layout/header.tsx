@@ -42,9 +42,9 @@ export default function Header() {
           <Link key={item.name} href={item.href}>
             <span
               className={
-                item.isActive
-                  ? "text-white uppercase text-[14px] font-inter "
-                  : "underline"
+                item.isActive && item.name === "home"
+                  ? "text-white uppercase text-[14px] font-inter border-b-2 border-white pb-1"
+                  : "text-white uppercase text-[14px] font-inter hover:text-white/80"
               }
             >
               {item.name}
@@ -55,10 +55,16 @@ export default function Header() {
 
       {/* Desktop Right Links */}
       <div className="items-center hidden gap-6 md:flex">
-        <Link href="/" className="text-white uppercase text-[14px] font-inter">
+        <Link
+          href="/"
+          className="text-white uppercase text-[14px] font-inter hover:text-white/80"
+        >
           about us
         </Link>
-        <Link href="/" className="text-white uppercase text-[14px] font-inter">
+        <Link
+          href="/"
+          className="text-white uppercase text-[14px] font-inter hover:text-white/80"
+        >
           contact
         </Link>
       </div>
@@ -105,8 +111,8 @@ export default function Header() {
               >
                 <span
                   className={
-                    item.isActive
-                      ? "text-white uppercase text-[16px] font-inter"
+                    item.isActive && item.name === "home"
+                      ? "text-white uppercase text-[16px] font-inter border-b-2 border-white pb-1"
                       : "text-gray-300 uppercase text-[16px] font-inter hover:text-white"
                   }
                 >
