@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Kemjet",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Kemjet - AI-Powered Molecular Design",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "Kemjet",
     description:
       "Building AI-powered therapeutics that redefine molecular design. Join the future of drug discovery.",
-    images: ["/images/og-image.png"],
+    images: ["/og-image.png"],
     creator: "@kemjet",
   },
   robots: {
