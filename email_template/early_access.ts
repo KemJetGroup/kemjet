@@ -36,12 +36,14 @@ Subject: Welcome to Kemjet Early Access.
       font-weight: bold;
       color: #ffffff;
       margin-bottom: 20px;
+      text-align: left;
     }
     p {
       font-size: 16px;
       line-height: 1.6;
       color: #DBDBDB;
       margin-bottom: 10px;
+      text-align: left;
     }
     .highlight {
       color: #19FB9B;
