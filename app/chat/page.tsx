@@ -133,11 +133,11 @@ export default function ChatPage() {
                 />
                 <Button
                   onClick={runAnalysis}
-                  disabled={!smilesInput.trim() || isAnalyzing}
-                  className="px-6 py-3.5 rounded-lg font-ibm-plex-mono text-xs font-medium tracking-wide uppercase transition-all hover:-translate-y-1px active:translate-y-0"
+                  disabled={isAnalyzing}
+                  className="px-6 py-3.5 rounded-lg font-ibm-plex-mono text-xs font-medium tracking-wide uppercase transition-all hover:-translate-y-1px active:translate-y-0 relative z-100"
                   style={{
                     background: "var(--retro-acid)",
-                    color: "#0a0d0f",
+                    color: "#ffffff",
                   }}
                 >
                   {isAnalyzing ? "Analyze..." : "Analyse →"}
