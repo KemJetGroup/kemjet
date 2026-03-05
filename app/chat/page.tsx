@@ -118,7 +118,7 @@ export default function ChatPage() {
                   value={smilesInput}
                   onChange={(e) => setSmilesInput(e.target.value)}
                   placeholder="Enter SMILES string... e.g. CC(=O)Oc1ccccc1C(=O)O"
-                  className="flex-1 border rounded-lg px-4 py-3.5 font-ibm-plex-mono text-sm resize-none min-h-[54px] outline-none transition-colors"
+                  className="flex-1 border rounded-lg px-4 pt-3 font-ibm-plex-mono text-sm resize-none min-h-[54px] outline-none transition-colors"
                   style={{
                     background: "var(--retro-bg)",
                     borderColor: "var(--retro-border2)",
@@ -134,7 +134,7 @@ export default function ChatPage() {
                 <Button
                   onClick={runAnalysis}
                   disabled={isAnalyzing}
-                  className="px-6 py-3.5 rounded-lg font-ibm-plex-mono text-xs font-medium tracking-wide uppercase transition-all hover:-translate-y-1px active:translate-y-0 relative z-100"
+                  className="px-6 py-3.5 rounded-lg font-ibm-plex-mono text-xs font-medium tracking-wide h-[54px] uppercase transition-all hover:-translate-y-1px active:translate-y-0 relative z-100"
                   style={{
                     background: "var(--retro-acid)",
                     color: "#ffffff",
@@ -145,7 +145,7 @@ export default function ChatPage() {
                 <Button
                   onClick={clearAll}
                   variant="outline"
-                  className="px-6 py-3.5 rounded-lg font-ibm-plex-mono text-xs font-medium tracking-wide uppercase transition-colors"
+                  className="px-6 py-3.5 rounded-lg font-ibm-plex-mono text-xs font-medium tracking-wide uppercase transition-colors h-[54px]"
                   style={{
                     borderColor: "var(--retro-border2)",
                     color: "var(--retro-text-dim)",
@@ -167,7 +167,7 @@ export default function ChatPage() {
                   <button
                     key={i}
                     onClick={() => loadExample(example.smiles, example.name)}
-                    className="text-[10px] md:text-[11px] px-3 py-1.5 rounded-full border transition-all font-ibm-plex-mono hover:bg-[rgba(184,255,79,0.05)]"
+                    className="text-[10px] md:text-[11px] px-3 py-1.5 rounded-full border transition-all font-ibm-plex-mono font-semibold hover:bg-[rgba(184,255,79,0.05)]"
                     style={{
                       borderColor: "var(--retro-border2)",
                       color: "var(--retro-text-dim)",
