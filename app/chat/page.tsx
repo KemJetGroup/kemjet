@@ -287,7 +287,7 @@ export default function ChatPage() {
                   }}
                 >
                   <div
-                    className="text-[32px] font-inter font-extralight leading-none mb-1"
+                    className="text-[20px] md:text-[32px] font-inter font-extralight leading-none mb-1"
                     style={{ color: "var(--retro-acid)" }}
                   >
                     {mockResults.length}
@@ -306,7 +306,7 @@ export default function ChatPage() {
                     borderColor: "var(--retro-border)",
                   }}
                 >
-                  <div className="text-[32px] font-inter font-extralight leading-none mb-1 text-white">
+                  <div className="text-[20px] md:text-[32px] font-inter font-extralight leading-none mb-1 text-white">
                     {mockResults[0]?.confidence}%
                   </div>
                   <div
@@ -323,7 +323,7 @@ export default function ChatPage() {
                     borderColor: "var(--retro-border)",
                   }}
                 >
-                  <div className="text-[32px] font-inter font-extralight leading-none mb-1 text-white">
+                  <div className="text-[20px] md:text-[32px] font-inter font-extralight leading-none mb-1 text-white">
                     Acyl
                   </div>
                   <div
@@ -340,7 +340,7 @@ export default function ChatPage() {
                     borderColor: "var(--retro-border)",
                   }}
                 >
-                  <div className="text-[32px] font-inter font-extralight leading-none mb-1 text-white">
+                  <div className="text-[20px] md:text-[32px] font-inter font-extralight leading-none mb-1 text-white">
                     1247
                   </div>
                   <div
