@@ -1,12 +1,12 @@
 "use client";
 
-import { Inter } from "next/font/google";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 export default function Hero() {
   const [email, setEmail] = useState("");
@@ -61,15 +61,15 @@ export default function Hero() {
   };
 
   return (
-    <section className="">
+    <section className="relative lg:min-h-screen lg:pb-32 ">
       <motion.div
-        className="md:pt-30 pt-52"
+        className="pt-20 lg:pt-30"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.h1
-          className="text-3xl font-semibold tracking-tighter text-center text-white md:text-6xl font-inter"
+          className="text-3xl font-semibold tracking-tighter text-center text-white lg:text-6xl font-inter"
           variants={itemVariants}
         >
           Building <span className="text-[#19FB9B]">Intelligent</span> Software
@@ -79,14 +79,14 @@ export default function Hero() {
           <span className="text-[#FFD512]">Design</span>
         </motion.h1>
         <motion.p
-          className="text-[#DBDBDB] text-center py-4 text-sm md:text-lg font-inter"
+          className="text-[#DBDBDB] text-center py-4 text-sm lg:text-lg font-inter"
           variants={itemVariants}
         >
           Kemjet builds A.I powering next-generation therapeutics.
         </motion.p>
         <motion.form
           onSubmit={handleSubmit}
-          className="flex md:w-[28%] w-[80%] p-1 mx-auto border rounded-full border-[#7D7D7D] z-10"
+          className="flex lg:w-[28%] w-[80%] p-1 mx-auto border rounded-full border-[#7D7D7D] z-10"
           variants={itemVariants}
         >
           <Input
@@ -112,8 +112,75 @@ export default function Hero() {
         width={600}
         height={600}
         quality={100}
-        className="absolute z-0 h-auto -translate-x-1/2 md:w-6/12 -bottom-52 md:-bottom-100 left-1/2 grayscale"
+        className="z-0 hidden h-auto mx-auto lg:block lg:w-6/12 grayscale"
       />
+
+      <div className="absolute inset-0 z-0 w-full min-h-full pointer-events-none">
+        <SparklesCore
+          className="w-full h-full"
+          particleDensity={60}
+          minSize={0.5}
+          maxSize={1.5}
+        />
+      </div>
+
+      <div className="lg:backdrop-blur-md lg:absolute lg:flex lg:flex-col lg:items-center lg:justify-center lg:w-full lg:h-[70vh] lg:-bottom-10 lg:my-10">
+        <div className=" border-t-0  border-t-[#1F1F1F] lg:border-t border-b-0 lg:border-b border-b-[#1F1F1F] w-full lg:flex">
+          <div className="w-[30%] border-r border-r-[#1F1F1F] h-full hidden lg:flex">
+            <div className="w-[40%] h-full grid grid-rows-3"></div>
+            <div className="w-[25%] border-r border-r-[#1F1F1F] h-full grid grid-rows-3">
+              <div className="border-b border-b-[#1F1F1F] w-full h-full"></div>
+              <div className="border-b border-b-[#1F1F1F] w-full h-full"></div>
+              <div className="w-full h-full"></div>
+            </div>
+            <div className="w-[35%] grid grid-rows-3  h-full">
+              <div className="border-b border-b-[#1F1F1F] w-full h-full"></div>
+              <div className="border-b border-b-[#1F1F1F] w-full h-full"></div>
+              <div className="w-full h-full"></div>
+            </div>
+          </div>
+
+          <div className="w-full py-20 space-y-8 ">
+            <h1 className="w-11/12 mx-auto text-lg text-center lg:w-7/12 lg:text-2xl font-inter">
+              KemJet is built by scientists, engineers, and builders who refuse
+              to accept that drug discovery should take decades.
+            </h1>
+
+            <div>
+              <div className="space-y-2">
+                <Image
+                  src="/logo/kemjet_logo.svg"
+                  alt="Logo"
+                  width={100}
+                  height={100}
+                  className="w-auto h-10 mx-auto lg:h-14"
+                />
+                <h1
+                  className={`font-normal lg:text-xl font-inter text-center text-white`}
+                >
+                  kemjet
+                </h1>
+              </div>
+
+              <p className="text-center text-white/50">The future of Biotech</p>
+            </div>
+          </div>
+
+          <div className="w-[30%] border-l border-l-[#1F1F1F] h-full hidden lg:flex">
+            <div className="w-[35%] grid grid-rows-3 border-r border-r-[#1F1F1F] h-full">
+              <div className="border-b border-b-[#1F1F1F] w-full h-full"></div>
+              <div className="border-b border-b-[#1F1F1F] w-full h-full"></div>
+              <div className="w-full h-full"></div>
+            </div>
+            <div className="w-[25%]  h-full grid grid-rows-3">
+              <div className="border-b border-b-[#1F1F1F] w-full h-full"></div>
+              <div className="border-b border-b-[#1F1F1F] w-full h-full"></div>
+              <div className="w-full h-full"></div>
+            </div>
+            <div className="w-[40%] h-full grid grid-rows-3"></div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
